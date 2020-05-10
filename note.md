@@ -25,8 +25,10 @@
 
 
 5. 创建创建，添加内容
-`/etc/modprobe.d/asus_nb_wmi.conf`
-`options asus_nb_wmi wapf=4`
+```
+/etc/modprobe.d/asus_nb_wmi.conf
+options asus_nb_wmi wapf=4
+```
 
 # Install rime
 /home/yangxu/.config/ibus/rime/default.yaml
