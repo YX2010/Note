@@ -10,6 +10,7 @@
 ```
 
 ## solve
+[参考教程](https://www.bbsmax.com/A/Gkz109ZZdR)
 1. `lspci -nnk | grep -A2 0280`
 
 ```
@@ -23,9 +24,9 @@
 4. 将系统挂起，然后重启, wifi正常使用
 
 
-创建创建，添加内容
+5. 创建创建，添加内容
 `/etc/modprobe.d/asus_nb_wmi.conf`
-options asus_nb_wmi wapf=4
+`options asus_nb_wmi wapf=4`
 
 # Install rime
 /home/yangxu/.config/ibus/rime/default.yaml
