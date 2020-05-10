@@ -1,0 +1,31 @@
+# Wifi
+
+```
+0: phy0: Wireless LAN
+	Soft blocked: no
+	Hard blocked: yes
+1: asus-wlan: Wireless LAN
+	Soft blocked: no
+	Hard blocked: no
+```
+
+## solve
+1. `lspci -nnk | grep -A2 0280`
+
+```
+03:00.0 Network controller [0280]: Qualcomm Atheros AR9485 Wireless Network Adapter [168c:0032] (rev 01)
+	Subsystem: Lite-On Communications Inc AR9485 Wireless Network Adapter [11ad:6627]
+	Kernel driver in use: *ath9k*
+```
+
+2. `lsmod | grep -e ath9k -e asus`
+3. `rfkill list all`
+4. 将系统挂起，然后重启, wifi正常使用
+
+
+创建创建，添加内容
+`/etc/modprobe.d/asus_nb_wmi.conf`
+options asus_nb_wmi wapf=4
+
+# Install rime
+/home/yangxu/.config/ibus/rime/default.yaml
