@@ -32,3 +32,11 @@ options asus_nb_wmi wapf=4
 
 # Install rime
 /home/yangxu/.config/ibus/rime/default.yaml
+
+# Linux 忘记用户用与密码
+1. 重启系统
+2. 长按`shift`直到出现菜单。选择`recovery mode`
+3. 选择`root`
+4. `/etc/passwd` 查看用户名
+5. `passwd username`
+6. 重启 `reboot`
